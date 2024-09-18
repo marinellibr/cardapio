@@ -1,0 +1,55 @@
+header {
+  width: 100vw;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  justify-content: flex-start;
+  button {
+    width: 128px;
+    height: 32px;
+    background-color: #c9c6bf;
+
+    border: none;
+    border-bottom: solid 2px #17286e;
+  }
+}
+
+.selected {
+  background-color: red;
+}
+
+.pdf {
+  padding-top: 16px;
+  width: 100vw;
+  height: calc(100vh - 96px);
+  display: flex;
+  flex-direction: column;
+
+  pdf-viewer {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
