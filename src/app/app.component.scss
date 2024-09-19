@@ -1,9 +1,27 @@
+@font-face {
+  font-family: "CustomFont";
+  src: url("/public/fonts/Christmas\ Vibes.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CustomFont2";
+  src: url("/public/fonts/KeplerStdLight.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 header {
   width: 100vw;
   height: 64px;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  font-family: "kepler-std", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 section {
@@ -12,16 +30,20 @@ section {
   button {
     width: 128px;
     height: 32px;
-    background-color: #c9c6bf;
 
     border: none;
     border-bottom: solid 2px #17286e;
+
+    color: #17286e;
+
+    &.selected{
+      background-color: #17286e;
+      color: #f3f3f3;
+      font-weight: bold;
+    }
   }
 }
 
-.selected {
-  background-color: red;
-}
 
 .pdf {
   padding-top: 16px;
@@ -37,8 +59,8 @@ section {
 }
 
 .loader {
-  border: 8px solid #f3f3f3;
-  border-top: 8px solid #3498db;
+  border: 8px solid #dbcbb7;
+  border-top: 8px solid #17286e;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -52,4 +74,13 @@ section {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.non-selected{
+  width: 100vw;
+  height: 600px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

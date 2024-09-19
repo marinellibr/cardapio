@@ -9,7 +9,10 @@
 </section>
 
 <section *ngIf="foods || drinks" class="pdf">
-  <div class="loader" *ngIf="loading"></div>
+  <div class="non-selected" *ngIf="loading">
+    <div class="loader" ></div>
+  </div>
+  
   <pdf-viewer
     [src]="pdfSrc"
     [render-text]="true"
@@ -18,4 +21,9 @@
     [show-all]="true"
     [zoom]="1.0"
   ></pdf-viewer>
+</section>
+
+
+<section class="non-selected" *ngIf="!foods && !drinks">
+  <p>Selecione uma opção acima.</p>
 </section>
